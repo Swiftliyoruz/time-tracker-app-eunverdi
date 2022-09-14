@@ -8,6 +8,8 @@
 import UIKit
 
 class StatusPageViewController: UIViewController {
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var taskNameLabel: UILabel!
     @IBOutlet weak var moreButton: UIButton!
     @IBOutlet weak var seeAllButton: UIButton!
     @IBOutlet weak var tableView: UITableView! {
@@ -21,7 +23,15 @@ class StatusPageViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
+    
+    @IBAction func detailButtonClicked(_ sender: Any) {
+        
+        let detailVC = DetailViewController.instantiate()
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
 }
 
 extension StatusPageViewController: UITableViewDelegate, UITableViewDataSource {

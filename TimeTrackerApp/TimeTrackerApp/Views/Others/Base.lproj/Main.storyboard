@@ -11,6 +11,9 @@
         <array key="Rubik-Medium.ttf">
             <string>Rubik-Medium</string>
         </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -30,6 +33,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6h-at-sDz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-759" y="948"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="HBD-yT-uRt">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="POr-dR-hj8" customClass="DetailViewController" customModule="TimeTrackerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CKf-M9-m5m">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gFj-vn-kfU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oIT-F9-zqo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MMt-mi-6mn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1703" y="1686"/>
         </scene>
         <!--Status Page View Controller-->
         <scene sceneID="M04-qc-jLg">
@@ -64,14 +83,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Timer Card" translatesAutoresizingMaskIntoConstraints="NO" id="hv1-Tr-TSn">
-                                <rect key="frame" x="20" y="146" width="388" height="114"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="234" translatesAutoresizingMaskIntoConstraints="NO" id="cts-PS-l5I">
                                 <rect key="frame" x="20" y="296" width="392" height="32"/>
                                 <subviews>
@@ -94,27 +105,83 @@
                                 <rect key="frame" x="18" y="344" width="393" height="499"/>
                                 <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7a8-nu-Xdn">
+                                <rect key="frame" x="20" y="146" width="388" height="114"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:32:10" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8D-vv-jvs">
+                                        <rect key="frame" x="16" y="16" width="134.66666666666666" height="38"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="32"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="Vj8-hy-Ktr">
+                                        <rect key="frame" x="16" y="69" width="12" height="12"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Rasion Project" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6L-V2-Vdc">
+                                        <rect key="frame" x="40" y="66" width="338" height="19"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right arrow" translatesAutoresizingMaskIntoConstraints="NO" id="t7z-rP-NF6">
+                                        <rect key="frame" x="348" y="24" width="24" height="24"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKn-b7-Lf7">
+                                        <rect key="frame" x="0.0" y="0.0" width="388" height="114"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                                        <connections>
+                                            <action selector="detailButtonClicked:" destination="O6W-VT-SPn" eventType="touchUpInside" id="vGQ-uJ-muA"/>
+                                            <segue destination="POr-dR-hj8" kind="showDetail" id="rA2-lJ-a7i"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.027450980392156862" green="0.015686274509803921" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Vj8-hy-Ktr" firstAttribute="top" secondItem="c8D-vv-jvs" secondAttribute="bottom" constant="15" id="265-T7-54f"/>
+                                    <constraint firstAttribute="trailing" secondItem="NKn-b7-Lf7" secondAttribute="trailing" id="2l1-Jx-1Jh"/>
+                                    <constraint firstAttribute="bottom" secondItem="NKn-b7-Lf7" secondAttribute="bottom" id="8cw-g1-3Y4"/>
+                                    <constraint firstAttribute="trailing" secondItem="t7z-rP-NF6" secondAttribute="trailing" constant="16" id="G1H-RS-ODo"/>
+                                    <constraint firstItem="t7z-rP-NF6" firstAttribute="top" secondItem="7a8-nu-Xdn" secondAttribute="top" constant="24" id="HOr-L6-yfq"/>
+                                    <constraint firstItem="V6L-V2-Vdc" firstAttribute="top" secondItem="c8D-vv-jvs" secondAttribute="bottom" constant="12" id="PHk-Z0-U80"/>
+                                    <constraint firstItem="NKn-b7-Lf7" firstAttribute="top" secondItem="7a8-nu-Xdn" secondAttribute="top" id="cKK-TP-DyU"/>
+                                    <constraint firstAttribute="trailing" secondItem="V6L-V2-Vdc" secondAttribute="trailing" constant="10" id="ema-dh-Odm"/>
+                                    <constraint firstItem="Vj8-hy-Ktr" firstAttribute="leading" secondItem="7a8-nu-Xdn" secondAttribute="leading" constant="16" id="guw-vY-YCw"/>
+                                    <constraint firstItem="NKn-b7-Lf7" firstAttribute="leading" secondItem="7a8-nu-Xdn" secondAttribute="leading" id="jBb-bH-wd2"/>
+                                    <constraint firstItem="c8D-vv-jvs" firstAttribute="leading" secondItem="7a8-nu-Xdn" secondAttribute="leading" constant="16" id="n0O-vj-cJZ"/>
+                                    <constraint firstItem="V6L-V2-Vdc" firstAttribute="leading" secondItem="Vj8-hy-Ktr" secondAttribute="trailing" constant="12" id="tVR-7D-wlE"/>
+                                    <constraint firstItem="c8D-vv-jvs" firstAttribute="top" secondItem="7a8-nu-Xdn" secondAttribute="top" constant="16" id="yPr-HH-RMH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="POW-YX-hBw"/>
                         <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="POW-YX-hBw" firstAttribute="trailing" secondItem="cts-PS-l5I" secondAttribute="trailing" constant="16" id="32f-uc-26j"/>
-                            <constraint firstItem="hv1-Tr-TSn" firstAttribute="top" secondItem="Qqh-o3-wHl" secondAttribute="bottom" constant="24" id="5ce-ln-Xle"/>
                             <constraint firstItem="Qqh-o3-wHl" firstAttribute="top" secondItem="POW-YX-hBw" secondAttribute="top" constant="40" id="6tf-6l-a0L"/>
-                            <constraint firstItem="hv1-Tr-TSn" firstAttribute="height" secondItem="8cE-e1-2G5" secondAttribute="height" multiplier="0.12311" id="9aM-Ib-ufB"/>
                             <constraint firstItem="Qqh-o3-wHl" firstAttribute="leading" secondItem="8cE-e1-2G5" secondAttribute="leading" constant="20" symbolic="YES" id="IVz-WS-i2N"/>
-                            <constraint firstItem="POW-YX-hBw" firstAttribute="trailing" secondItem="2s1-mi-AmE" secondAttribute="trailing" constant="343" id="RU1-Xo-Dhy"/>
-                            <constraint firstItem="hv1-Tr-TSn" firstAttribute="width" secondItem="8cE-e1-2G5" secondAttribute="width" multiplier="0.906542" id="T0z-DC-vAM"/>
+                            <constraint firstItem="2s1-mi-AmE" firstAttribute="leading" secondItem="POW-YX-hBw" secondAttribute="leading" constant="85" id="Ivl-Bf-bp3"/>
+                            <constraint firstItem="7a8-nu-Xdn" firstAttribute="leading" secondItem="POW-YX-hBw" secondAttribute="leading" constant="20" id="Na7-cx-Nrm"/>
+                            <constraint firstItem="9QQ-zx-t2M" firstAttribute="leading" secondItem="POW-YX-hBw" secondAttribute="leading" constant="20" id="OU3-Xs-5k0"/>
+                            <constraint firstItem="POW-YX-hBw" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2s1-mi-AmE" secondAttribute="trailing" id="RU1-Xo-Dhy"/>
                             <constraint firstItem="zh6-be-EYq" firstAttribute="leading" secondItem="POW-YX-hBw" secondAttribute="leading" constant="18" id="bIc-v1-RGj"/>
                             <constraint firstItem="zh6-be-EYq" firstAttribute="top" secondItem="9QQ-zx-t2M" secondAttribute="bottom" constant="16" id="bjy-Xs-HFx"/>
-                            <constraint firstItem="cts-PS-l5I" firstAttribute="top" secondItem="hv1-Tr-TSn" secondAttribute="bottom" constant="36" id="fZA-0X-xAP"/>
+                            <constraint firstItem="7a8-nu-Xdn" firstAttribute="height" secondItem="8cE-e1-2G5" secondAttribute="height" multiplier="0.12311" id="coR-Pf-r1G"/>
+                            <constraint firstItem="POW-YX-hBw" firstAttribute="trailing" secondItem="7a8-nu-Xdn" secondAttribute="trailing" constant="20" id="efJ-qr-a4k"/>
                             <constraint firstItem="POW-YX-hBw" firstAttribute="trailing" secondItem="zh6-be-EYq" secondAttribute="trailing" constant="17" id="kR6-nk-bFv"/>
                             <constraint firstItem="zh6-be-EYq" firstAttribute="top" secondItem="cts-PS-l5I" secondAttribute="bottom" constant="16" id="lvX-uv-HmM"/>
+                            <constraint firstItem="cts-PS-l5I" firstAttribute="top" secondItem="7a8-nu-Xdn" secondAttribute="bottom" constant="36" id="sPI-Tz-9Dz"/>
                             <constraint firstItem="POW-YX-hBw" firstAttribute="bottom" secondItem="zh6-be-EYq" secondAttribute="bottom" id="uKd-Nb-ALU"/>
                             <constraint firstItem="cts-PS-l5I" firstAttribute="leading" secondItem="POW-YX-hBw" secondAttribute="leading" constant="20" id="ur7-uF-7dR"/>
                             <constraint firstItem="POW-YX-hBw" firstAttribute="bottom" secondItem="2s1-mi-AmE" secondAttribute="bottom" constant="509" id="xEd-9Z-tof"/>
                             <constraint firstAttribute="trailing" secondItem="Qqh-o3-wHl" secondAttribute="trailing" constant="20" symbolic="YES" id="xJp-c8-4be"/>
-                            <constraint firstItem="hv1-Tr-TSn" firstAttribute="centerX" secondItem="POW-YX-hBw" secondAttribute="centerX" id="zCX-f0-18y"/>
+                            <constraint firstItem="7a8-nu-Xdn" firstAttribute="width" secondItem="8cE-e1-2G5" secondAttribute="width" multiplier="0.906542" id="xg0-sM-gWy"/>
+                            <constraint firstItem="7a8-nu-Xdn" firstAttribute="top" secondItem="Qqh-o3-wHl" secondAttribute="bottom" constant="24" id="xvE-IF-oLs"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="time-outline" selectedImage="time" id="a1z-PT-afN"/>
@@ -122,11 +189,13 @@
                         <outlet property="moreButton" destination="feB-be-6Hb" id="Omj-Un-6UB"/>
                         <outlet property="seeAllButton" destination="Aa3-Te-gka" id="tQC-bS-VDm"/>
                         <outlet property="tableView" destination="zh6-be-EYq" id="hho-ym-J9W"/>
+                        <outlet property="taskNameLabel" destination="V6L-V2-Vdc" id="Gaf-Lv-Ozx"/>
+                        <outlet property="timerLabel" destination="c8D-vv-jvs" id="pIO-Tg-XjV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5c-1W-Ajg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1703.2" y="947.29064039408865"/>
+            <point key="canvasLocation" x="-1703.2710280373831" y="946.65226781857461"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bPI-nX-g5v">
@@ -166,12 +235,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Timer Card" width="343" height="114"/>
         <image name="add" width="32" height="32"/>
+        <image name="ellipse" width="12" height="12"/>
         <image name="more" width="24" height="24"/>
         <image name="pie-chart" width="28" height="28"/>
+        <image name="right arrow" width="24" height="24"/>
         <image name="time" width="24" height="24"/>
         <image name="time-outline" width="28" height="28"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
