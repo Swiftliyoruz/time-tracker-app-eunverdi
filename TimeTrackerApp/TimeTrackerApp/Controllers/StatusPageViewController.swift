@@ -27,7 +27,6 @@ class StatusPageViewController: UIViewController {
     }
     
     @IBAction func detailButtonClicked(_ sender: Any) {
-        
         let detailVC = DetailViewController.instantiate()
         navigationController?.pushViewController(detailVC, animated: true)
     }
@@ -35,8 +34,12 @@ class StatusPageViewController: UIViewController {
 }
 
 extension StatusPageViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 2
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TaskTableViewCell.identifier, for: indexPath) as? TaskTableViewCell else {
@@ -46,5 +49,15 @@ extension StatusPageViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 84
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let spaceView = UIView()
+        spaceView.backgroundColor = view.backgroundColor
+        return spaceView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0
     }
 }
