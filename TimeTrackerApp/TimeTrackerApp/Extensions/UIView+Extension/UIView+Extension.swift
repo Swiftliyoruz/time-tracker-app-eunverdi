@@ -5,11 +5,9 @@
 //  Created by Ensar Batuhan Ünverdi on 14.09.2022.
 //
 
-import Foundation
 import UIKit
 
 extension UIView {
-
     @IBInspectable var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius

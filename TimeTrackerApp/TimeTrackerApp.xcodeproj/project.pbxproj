@@ -20,6 +20,7 @@
 		47AA977A28D1F8B200C4C5A1 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47AA977928D1F8B200C4C5A1 /* TaskTableViewCell.xib */; };
 		47AA977E28D22A2C00C4C5A1 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA977D28D22A2C00C4C5A1 /* UIViewController+Extension.swift */; };
 		47AA978228D22A8700C4C5A1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA978128D22A8700C4C5A1 /* DetailViewController.swift */; };
+		47E8B27428D284CC000AE9F3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8B27328D284CC000AE9F3 /* Constant.swift */; };
 		B9D3F025557A8F220E51C5B2 /* Pods_TimeTrackerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E794A8CB4A716EA8260A1C /* Pods_TimeTrackerApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		47AA977928D1F8B200C4C5A1 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TaskTableViewCell.xib; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/TaskTableViewCell.xib"; sourceTree = "<group>"; };
 		47AA977D28D22A2C00C4C5A1 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		47AA978128D22A8700C4C5A1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		47E8B27328D284CC000AE9F3 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		50E794A8CB4A716EA8260A1C /* Pods_TimeTrackerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeTrackerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C474FFE7C490178FD42442 /* Pods-TimeTrackerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTrackerApp.debug.xcconfig"; path = "Target Support Files/Pods-TimeTrackerApp/Pods-TimeTrackerApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D739578855C608A3DA6D91B0 /* Pods-TimeTrackerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTrackerApp.release.xcconfig"; path = "Target Support Files/Pods-TimeTrackerApp/Pods-TimeTrackerApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		47AA975428D1F45400C4C5A1 /* TimeTrackerApp */ = {
 			isa = PBXGroup;
 			children = (
+				47E8B27228D284BB000AE9F3 /* Constant */,
 				47AA976928D1F5CD00C4C5A1 /* Extensions */,
 				47AA976D28D1F66600C4C5A1 /* Helpers */,
 				47AA976C28D1F61B00C4C5A1 /* Views */,
@@ -165,6 +168,14 @@
 				47AA977D28D22A2C00C4C5A1 /* UIViewController+Extension.swift */,
 			);
 			path = "UIViewController+Extension";
+			sourceTree = "<group>";
+		};
+		47E8B27228D284BB000AE9F3 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				47E8B27328D284CC000AE9F3 /* Constant.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		B833DBC2F4241ADE69E4939B /* Frameworks */ = {
@@ -305,6 +316,7 @@
 				47AA977E28D22A2C00C4C5A1 /* UIViewController+Extension.swift in Sources */,
 				47AA975A28D1F45400C4C5A1 /* StatusPageViewController.swift in Sources */,
 				47AA975628D1F45400C4C5A1 /* AppDelegate.swift in Sources */,
+				47E8B27428D284CC000AE9F3 /* Constant.swift in Sources */,
 				47AA977728D1F84D00C4C5A1 /* TaskTableViewCell.swift in Sources */,
 				47AA976B28D1F5DD00C4C5A1 /* UIView+Extension.swift in Sources */,
 				47AA975828D1F45400C4C5A1 /* SceneDelegate.swift in Sources */,

@@ -7,12 +7,12 @@
 
 import UIKit
 
-class StatusPageViewController: UIViewController {
-    @IBOutlet weak var timerLabel: UILabel!
-    @IBOutlet weak var taskNameLabel: UILabel!
-    @IBOutlet weak var moreButton: UIButton!
-    @IBOutlet weak var seeAllButton: UIButton!
-    @IBOutlet weak var tableView: UITableView! {
+final class StatusPageViewController: UIViewController {
+    @IBOutlet private weak var timerLabel: UILabel!
+    @IBOutlet private weak var taskNameLabel: UILabel!
+    @IBOutlet private weak var moreButton: UIButton!
+    @IBOutlet private weak var seeAllButton: UIButton!
+    @IBOutlet private weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
@@ -36,10 +36,10 @@ class StatusPageViewController: UIViewController {
 extension StatusPageViewController: UITableViewDelegate, UITableViewDataSource {
    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        2
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TaskTableViewCell.identifier, for: indexPath) as? TaskTableViewCell else {
@@ -48,7 +48,7 @@ extension StatusPageViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 84
+        Constant.rowHeight
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -58,6 +58,6 @@ extension StatusPageViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0
+        Constant.headerHeightInSection
     }
 }

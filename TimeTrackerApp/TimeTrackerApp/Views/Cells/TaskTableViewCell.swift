@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TaskTableViewCell: UITableViewCell {
+final class TaskTableViewCell: UITableViewCell {
 
     static let identifier = String(describing: TaskTableViewCell.self)
 
@@ -24,13 +24,7 @@ class TaskTableViewCell: UITableViewCell {
         self.clipsToBounds = true
     }
 
-    @IBAction func timerButtonClicked(_ sender: Any) {
-        if timerButton.tag == 0 {
-            timerButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
-            timerButton.tag = 1
-        } else {
-            timerButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
-            timerButton.tag = 0
-        }
+    @IBAction func timerButtonClicked(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
     }
 }
