@@ -21,6 +21,7 @@ final class StatusPageViewController: UIViewController {
             tableView.register(UINib(nibName: TaskTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: TaskTableViewCell.identifier)
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +30,7 @@ final class StatusPageViewController: UIViewController {
     @IBAction func detailButtonClicked(_ sender: Any) {
         let detailVC = DetailViewController.instantiate()
         navigationController?.pushViewController(detailVC, animated: true)
+        
     }
     
 }
