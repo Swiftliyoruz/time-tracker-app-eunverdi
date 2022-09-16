@@ -17,14 +17,12 @@ class DetailViewController: UIViewController {
     
     var timer = Timer()
     let shapeLayer = CAShapeLayer()
-    var durationTimer: Int = 540
-    var endTime = 535
+    var durationTimer: Int = 5
+    var endTime = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         timerLabel.text = "\(durationTimer)"
-        animationCircular()
-        basicAnimation()
     }
     
     override func viewDidLayoutSubviews() {
@@ -35,12 +33,20 @@ class DetailViewController: UIViewController {
     @objc func timerAction() {
         durationTimer -= 1
         timerLabel.text = "\(durationTimer)"
-        if durationTimer == endTime {
+        if durationTimer == 0 {
             timer.invalidate()
+            let alertController = UIAlertController(title: "Oops", message: "Time's up!", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK", style: .default) { _ in
+                self.navigationController?.popViewController(animated: true)
+            }
+            alertController.addAction(alertAction)
+            present(alertController, animated: true)
         }
     }
     
     @IBAction func finishButtonTapped(_ sender: Any) {
+        //finishle başlatıyo biliyorum ama denemelik :))))
+        animationCircular()
         basicAnimation()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
     }
