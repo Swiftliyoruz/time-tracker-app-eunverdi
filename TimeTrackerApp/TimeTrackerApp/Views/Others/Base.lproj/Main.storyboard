@@ -3,6 +3,7 @@
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,17 +18,17 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Add Task-->
         <scene sceneID="vkL-HI-Nji">
             <objects>
-                <viewController id="rSR-7k-Ft2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddTaskViewController" id="rSR-7k-Ft2" customClass="AddTaskViewController" customModule="TimeTrackerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ghb-Hg-ed0">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="w61-ZQ-7vb"/>
-                        <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="BackgroundColorSet"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lXt-FR-zES"/>
+                    <navigationItem key="navigationItem" title="Add Task" id="lXt-FR-zES"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6h-at-sDz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,14 +91,14 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLC-lV-hJt">
                                 <rect key="frame" x="19" y="679" width="389" height="60"/>
-                                <color key="backgroundColor" name="BackgroundColorSet"/>
+                                <color key="backgroundColor" name="FinishButtonColorSet"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ycl-01-eb1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="21"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Finish">
-                                    <color key="titleColor" name="LabelColorSet"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -110,13 +111,14 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOr-uV-cyD">
                                 <rect key="frame" x="19" y="763" width="389" height="60"/>
+                                <color key="backgroundColor" name="WhiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="zhW-QJ-cng"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="21"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Quit">
-                                    <color key="titleColor" name="LabelColorSet"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -212,6 +214,9 @@
                                         <state key="normal" title="See all">
                                             <color key="titleColor" systemColor="systemGrayColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="seeAllButtonTapped:" destination="O6W-VT-SPn" eventType="touchUpInside" id="76X-5e-WkW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -310,7 +315,6 @@
                     <navigationItem key="navigationItem" title="Home" id="t0Z-lA-dlH"/>
                     <connections>
                         <outlet property="moreButton" destination="feB-be-6Hb" id="Omj-Un-6UB"/>
-                        <outlet property="seeAllButton" destination="Aa3-Te-gka" id="tQC-bS-VDm"/>
                         <outlet property="tableView" destination="zh6-be-EYq" id="hho-ym-J9W"/>
                         <outlet property="taskNameLabel" destination="V6L-V2-Vdc" id="Gaf-Lv-Ozx"/>
                         <outlet property="timerLabel" destination="c8D-vv-jvs" id="pIO-Tg-XjV"/>
@@ -320,15 +324,15 @@
             </objects>
             <point key="canvasLocation" x="-1564" y="948"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="bPI-nX-g5v">
             <objects>
-                <tabBarController id="S7S-Xg-8qC" sceneMemberID="viewController">
+                <tabBarController id="S7S-Xg-8qC" customClass="MainTabBarController" customModule="TimeTrackerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uWf-kJ-F28">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.8078432083" green="0.2823529541" blue="0.13333332540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="6un-aa-kIn" kind="relationship" relationship="viewControllers" id="oTX-w0-LsK"/>
@@ -340,21 +344,36 @@
             </objects>
             <point key="canvasLocation" x="-759" y="207"/>
         </scene>
-        <!--View Controller-->
+        <!--All Task-->
         <scene sceneID="uZP-r8-hy8">
             <objects>
-                <viewController id="yHs-MU-gDv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AllTaskViewController" id="yHs-MU-gDv" customClass="AllTaskViewController" customModule="TimeTrackerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SE8-3O-pu5">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MLT-Ou-WLk">
+                                <rect key="frame" x="20" y="85.666666666666686" width="388" height="755"/>
+                                <color key="backgroundColor" name="BackgroundColorSet"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2LW-ZD-HMZ"/>
-                        <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="BackgroundColorSet"/>
+                        <constraints>
+                            <constraint firstItem="MLT-Ou-WLk" firstAttribute="width" secondItem="SE8-3O-pu5" secondAttribute="width" multiplier="0.906542" id="Hte-Di-1rH"/>
+                            <constraint firstItem="MLT-Ou-WLk" firstAttribute="centerX" secondItem="SE8-3O-pu5" secondAttribute="centerX" id="aJH-OU-vnG"/>
+                            <constraint firstItem="MLT-Ou-WLk" firstAttribute="height" secondItem="SE8-3O-pu5" secondAttribute="height" multiplier="0.815335" id="fdg-DZ-ssh"/>
+                            <constraint firstItem="MLT-Ou-WLk" firstAttribute="centerY" secondItem="SE8-3O-pu5" secondAttribute="centerY" id="vMK-q6-e6l"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="IUV-Ts-5Tn"/>
+                    <navigationItem key="navigationItem" title="All Task" id="IUV-Ts-5Tn"/>
+                    <connections>
+                        <outlet property="tableView" destination="MLT-Ou-WLk" id="YHp-Di-fGp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qg1-YP-YfA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1643" y="948"/>
+            <point key="canvasLocation" x="1642.9906542056074" y="947.94816414686829"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mqo-rI-CB3">
@@ -379,9 +398,10 @@
         <scene sceneID="Ggo-v4-dFo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vjc-yc-dZm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="add" selectedImage="add" id="f0A-E0-MNr">
+                    <tabBarItem key="tabBarItem" title="" image="add" id="f0A-E0-MNr">
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                        <color key="badgeColor" red="0.027450980390000001" green="0.015686274510000001" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                        <imageReference key="selectedImage" image="plus.circle.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="u6T-VP-TSA">
@@ -401,7 +421,7 @@
         <scene sceneID="VFm-sF-A9Y">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WKk-dF-mqA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="pie-chart" selectedImage="pie-chart" id="v32-9G-PDL"/>
+                    <tabBarItem key="tabBarItem" title="" image="pie-chart" selectedImage="pie-chart filled" id="v32-9G-PDL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fsj-Pf-6eA">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
@@ -440,11 +460,16 @@
         <image name="ellipse" width="12" height="12"/>
         <image name="more" width="18" height="4"/>
         <image name="pie-chart" width="24" height="24"/>
+        <image name="pie-chart filled" width="24" height="24"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="right arrow" width="24" height="24"/>
         <image name="time" width="24" height="24"/>
         <image name="time-outline" width="28" height="28"/>
         <namedColor name="BackgroundColorSet">
-            <color red="0.89800000190734863" green="0.89800000190734863" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FinishButtonColorSet">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LabelColorSet">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

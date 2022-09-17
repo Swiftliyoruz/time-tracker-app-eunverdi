@@ -1,16 +1,14 @@
 //
-//  ViewController.swift
+//  AllTaskViewController.swift
 //  TimeTrackerApp
 //
-//  Created by Ensar Batuhan Ünverdi on 14.09.2022.
+//  Created by Ensar Batuhan Ünverdi on 17.09.2022.
 //
 
 import UIKit
 
-final class StatusPageViewController: UIViewController {
-    @IBOutlet private weak var timerLabel: UILabel!
-    @IBOutlet private weak var taskNameLabel: UILabel!
-    @IBOutlet private weak var moreButton: UIButton!
+class AllTaskViewController: UIViewController {
+    
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self
@@ -20,29 +18,16 @@ final class StatusPageViewController: UIViewController {
             tableView.register(UINib(nibName: TaskTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: TaskTableViewCell.identifier)
         }
     }
-    private var durationTimer = 35
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timerLabel.text = "\(durationTimer)"
-    }
-    
-    @IBAction func detailButtonClicked(_ sender: Any) {
-        let detailVC = DetailViewController.instantiate()
-        detailVC.durationTimer = durationTimer
-        navigationController?.pushViewController(detailVC, animated: true)
-    }
-    
-    @IBAction func seeAllButtonTapped(_ sender: UIButton) {
-        let allTaskVC = AllTaskViewController.instantiate()
-        navigationController?.pushViewController(allTaskVC, animated: true)
     }
 }
 
-extension StatusPageViewController: UITableViewDelegate, UITableViewDataSource {
-   
+extension AllTaskViewController: UITableViewDelegate, UITableViewDataSource {
+  
     func numberOfSections(in tableView: UITableView) -> Int {
-        2
+        10
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1

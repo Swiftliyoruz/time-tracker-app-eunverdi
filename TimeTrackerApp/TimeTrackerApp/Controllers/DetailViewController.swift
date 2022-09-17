@@ -7,19 +7,18 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+final class DetailViewController: UIViewController {
     
-    @IBOutlet weak var taskTitleLabel: UILabel!
-    @IBOutlet weak var taskTagLabel: UILabel!
-    @IBOutlet weak var taskNameLabel: UILabel!
-    @IBOutlet weak var timerAnimationView: UIImageView!
-    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet private weak var taskTitleLabel: UILabel!
+    @IBOutlet private weak var taskTagLabel: UILabel!
+    @IBOutlet private weak var taskNameLabel: UILabel!
+    @IBOutlet private weak var timerAnimationView: UIImageView!
+    @IBOutlet private weak var timerLabel: UILabel!
     
-    var timer = Timer()
-    let shapeLayer = CAShapeLayer()
+    private var timer = Timer()
+    private let shapeLayer = CAShapeLayer()
     var durationTimer: Int = 5
-    var endTime = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         timerLabel.text = "\(durationTimer)"
@@ -45,7 +44,6 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func finishButtonTapped(_ sender: Any) {
-        //finishle başlatıyo biliyorum ama denemelik :))))
         animationCircular()
         basicAnimation()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
@@ -55,7 +53,7 @@ class DetailViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    func animationCircular() {
+    private func animationCircular() {
         let center = CGPoint(x: timerAnimationView.frame.width / 2, y: timerAnimationView.frame.height / 2)
         let endAngle = (-CGFloat.pi / 2)
         let startAngle = 2 * CGFloat.pi + endAngle
@@ -70,7 +68,7 @@ class DetailViewController: UIViewController {
         timerAnimationView.layer.addSublayer(shapeLayer)
     }
     
-    func basicAnimation() {
+    private func basicAnimation() {
         let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         basicAnimation.toValue = 0
         basicAnimation.duration = CFTimeInterval(durationTimer)

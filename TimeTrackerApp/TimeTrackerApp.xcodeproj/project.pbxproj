@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4791EA7428D5D02E00DBAEAD /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4791EA7328D5D02E00DBAEAD /* AddTaskViewController.swift */; };
+		4791EA7628D5D04300DBAEAD /* AllTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4791EA7528D5D04300DBAEAD /* AllTaskViewController.swift */; };
+		4791EA7828D5D17000DBAEAD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4791EA7728D5D17000DBAEAD /* MainTabBarController.swift */; };
 		47AA975628D1F45400C4C5A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA975528D1F45400C4C5A1 /* AppDelegate.swift */; };
 		47AA975828D1F45400C4C5A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA975728D1F45400C4C5A1 /* SceneDelegate.swift */; };
 		47AA975A28D1F45400C4C5A1 /* StatusPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA975928D1F45400C4C5A1 /* StatusPageViewController.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4791EA7328D5D02E00DBAEAD /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		4791EA7528D5D04300DBAEAD /* AllTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTaskViewController.swift; sourceTree = "<group>"; };
+		4791EA7728D5D17000DBAEAD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		47AA975228D1F45400C4C5A1 /* TimeTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47AA975528D1F45400C4C5A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47AA975728D1F45400C4C5A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +128,9 @@
 			children = (
 				47AA975928D1F45400C4C5A1 /* StatusPageViewController.swift */,
 				47AA978128D22A8700C4C5A1 /* DetailViewController.swift */,
+				4791EA7328D5D02E00DBAEAD /* AddTaskViewController.swift */,
+				4791EA7528D5D04300DBAEAD /* AllTaskViewController.swift */,
+				4791EA7728D5D17000DBAEAD /* MainTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -315,11 +324,14 @@
 			files = (
 				47AA977E28D22A2C00C4C5A1 /* UIViewController+Extension.swift in Sources */,
 				47AA975A28D1F45400C4C5A1 /* StatusPageViewController.swift in Sources */,
+				4791EA7828D5D17000DBAEAD /* MainTabBarController.swift in Sources */,
 				47AA975628D1F45400C4C5A1 /* AppDelegate.swift in Sources */,
 				47E8B27428D284CC000AE9F3 /* Constant.swift in Sources */,
 				47AA977728D1F84D00C4C5A1 /* TaskTableViewCell.swift in Sources */,
+				4791EA7628D5D04300DBAEAD /* AllTaskViewController.swift in Sources */,
 				47AA976B28D1F5DD00C4C5A1 /* UIView+Extension.swift in Sources */,
 				47AA975828D1F45400C4C5A1 /* SceneDelegate.swift in Sources */,
+				4791EA7428D5D02E00DBAEAD /* AddTaskViewController.swift in Sources */,
 				47AA978228D22A8700C4C5A1 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
