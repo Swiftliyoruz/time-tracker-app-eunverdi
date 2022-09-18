@@ -9,15 +9,15 @@ import UIKit
 
 final class DetailViewController: UIViewController {
     
+    private var timer = Timer()
+    private let shapeLayer = CAShapeLayer()
+    var durationTimer: Int = 5
+    
     @IBOutlet private weak var taskTitleLabel: UILabel!
     @IBOutlet private weak var taskTagLabel: UILabel!
     @IBOutlet private weak var taskNameLabel: UILabel!
     @IBOutlet private weak var timerAnimationView: UIImageView!
     @IBOutlet private weak var timerLabel: UILabel!
-    
-    private var timer = Timer()
-    private let shapeLayer = CAShapeLayer()
-    var durationTimer: Int = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()

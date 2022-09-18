@@ -8,6 +8,14 @@
 import UIKit
 
 final class StatusPageViewController: UIViewController {
+    
+    private var durationTimer = 35
+    private var taskFromPersistance: [TaskModel] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     @IBOutlet private weak var timerLabel: UILabel!
     @IBOutlet private weak var taskNameLabel: UILabel!
     @IBOutlet private weak var moreButton: UIButton!
@@ -20,11 +28,29 @@ final class StatusPageViewController: UIViewController {
             tableView.register(UINib(nibName: TaskTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: TaskTableViewCell.identifier)
         }
     }
-    private var durationTimer = 35
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchTaskFromPersistance()
         timerLabel.text = "\(durationTimer)"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        fetchTaskFromPersistance()
+    }
+    
+    private func fetchTaskFromPersistance() {
+        CoreDataManager.shared.getTaskFromPersistance { result in
+            switch result {
+            case .success(let tasks):
+                self.taskFromPersistance = tasks
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     @IBAction func detailButtonClicked(_ sender: Any) {
@@ -42,7 +68,7 @@ final class StatusPageViewController: UIViewController {
 extension StatusPageViewController: UITableViewDelegate, UITableViewDataSource {
    
     func numberOfSections(in tableView: UITableView) -> Int {
-        2
+        taskFromPersistance.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1

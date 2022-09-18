@@ -7,7 +7,13 @@
 
 import UIKit
 
-class AllTaskViewController: UIViewController {
+final class AllTaskViewController: UIViewController {
+    
+    private var taskFromPersistance: [TaskModel] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
@@ -21,13 +27,32 @@ class AllTaskViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchTaskFromPersistance()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        fetchTaskFromPersistance()
+    }
+    
+    private func fetchTaskFromPersistance() {
+        CoreDataManager.shared.getTaskFromPersistance { result in
+            switch result {
+            case .success(let tasks):
+                self.taskFromPersistance = tasks
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 
 extension AllTaskViewController: UITableViewDelegate, UITableViewDataSource {
   
     func numberOfSections(in tableView: UITableView) -> Int {
-        10
+        taskFromPersistance.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1

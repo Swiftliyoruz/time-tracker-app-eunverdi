@@ -10,6 +10,9 @@
 		4791EA7428D5D02E00DBAEAD /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4791EA7328D5D02E00DBAEAD /* AddTaskViewController.swift */; };
 		4791EA7628D5D04300DBAEAD /* AllTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4791EA7528D5D04300DBAEAD /* AllTaskViewController.swift */; };
 		4791EA7828D5D17000DBAEAD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4791EA7728D5D17000DBAEAD /* MainTabBarController.swift */; };
+		4791EA7E28D72F2300DBAEAD /* TaskModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4791EA7C28D72F2300DBAEAD /* TaskModel.xcdatamodeld */; };
+		4791EA8028D72F3C00DBAEAD /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4791EA7F28D72F3C00DBAEAD /* CoreDataStack.swift */; };
+		4791EA8228D72F5200DBAEAD /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4791EA8128D72F5200DBAEAD /* CoreDataManager.swift */; };
 		47AA975628D1F45400C4C5A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA975528D1F45400C4C5A1 /* AppDelegate.swift */; };
 		47AA975828D1F45400C4C5A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA975728D1F45400C4C5A1 /* SceneDelegate.swift */; };
 		47AA975A28D1F45400C4C5A1 /* StatusPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA975928D1F45400C4C5A1 /* StatusPageViewController.swift */; };
@@ -31,6 +34,9 @@
 		4791EA7328D5D02E00DBAEAD /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		4791EA7528D5D04300DBAEAD /* AllTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTaskViewController.swift; sourceTree = "<group>"; };
 		4791EA7728D5D17000DBAEAD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		4791EA7D28D72F2300DBAEAD /* TaskModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskModel.xcdatamodel; sourceTree = "<group>"; };
+		4791EA7F28D72F3C00DBAEAD /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		4791EA8128D72F5200DBAEAD /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		47AA975228D1F45400C4C5A1 /* TimeTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47AA975528D1F45400C4C5A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47AA975728D1F45400C4C5A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +70,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4791EA7928D72EE700DBAEAD /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4791EA7B28D72EF400DBAEAD /* CoreData */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		4791EA7B28D72EF400DBAEAD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4791EA7F28D72F3C00DBAEAD /* CoreDataStack.swift */,
+				4791EA8128D72F5200DBAEAD /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		47AA974928D1F45400C4C5A1 = {
 			isa = PBXGroup;
 			children = (
@@ -86,11 +109,13 @@
 		47AA975428D1F45400C4C5A1 /* TimeTrackerApp */ = {
 			isa = PBXGroup;
 			children = (
+				4791EA7928D72EE700DBAEAD /* Managers */,
 				47E8B27228D284BB000AE9F3 /* Constant */,
 				47AA976928D1F5CD00C4C5A1 /* Extensions */,
 				47AA976D28D1F66600C4C5A1 /* Helpers */,
 				47AA976C28D1F61B00C4C5A1 /* Views */,
 				47AA976E28D1F66A00C4C5A1 /* Controllers */,
+				4791EA7C28D72F2300DBAEAD /* TaskModel.xcdatamodeld */,
 				47AA976328D1F45600C4C5A1 /* Info.plist */,
 			);
 			path = TimeTrackerApp;
@@ -324,14 +349,17 @@
 			files = (
 				47AA977E28D22A2C00C4C5A1 /* UIViewController+Extension.swift in Sources */,
 				47AA975A28D1F45400C4C5A1 /* StatusPageViewController.swift in Sources */,
+				4791EA7E28D72F2300DBAEAD /* TaskModel.xcdatamodeld in Sources */,
 				4791EA7828D5D17000DBAEAD /* MainTabBarController.swift in Sources */,
 				47AA975628D1F45400C4C5A1 /* AppDelegate.swift in Sources */,
 				47E8B27428D284CC000AE9F3 /* Constant.swift in Sources */,
+				4791EA8028D72F3C00DBAEAD /* CoreDataStack.swift in Sources */,
 				47AA977728D1F84D00C4C5A1 /* TaskTableViewCell.swift in Sources */,
 				4791EA7628D5D04300DBAEAD /* AllTaskViewController.swift in Sources */,
 				47AA976B28D1F5DD00C4C5A1 /* UIView+Extension.swift in Sources */,
 				47AA975828D1F45400C4C5A1 /* SceneDelegate.swift in Sources */,
 				4791EA7428D5D02E00DBAEAD /* AddTaskViewController.swift in Sources */,
+				4791EA8228D72F5200DBAEAD /* CoreDataManager.swift in Sources */,
 				47AA978228D22A8700C4C5A1 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,6 +582,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4791EA7C28D72F2300DBAEAD /* TaskModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4791EA7D28D72F2300DBAEAD /* TaskModel.xcdatamodel */,
+			);
+			currentVersion = 4791EA7D28D72F2300DBAEAD /* TaskModel.xcdatamodel */;
+			path = TaskModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 47AA974A28D1F45400C4C5A1 /* Project object */;
 }
