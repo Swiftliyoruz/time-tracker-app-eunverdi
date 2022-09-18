@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4791EA7428D5D02E00DBAEAD /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4791EA7328D5D02E00DBAEAD /* AddTaskViewController.swift */; };
+		4791EA7628D5D04300DBAEAD /* AllTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4791EA7528D5D04300DBAEAD /* AllTaskViewController.swift */; };
+		4791EA7828D5D17000DBAEAD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4791EA7728D5D17000DBAEAD /* MainTabBarController.swift */; };
+		4791EA7E28D72F2300DBAEAD /* TaskModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4791EA7C28D72F2300DBAEAD /* TaskModel.xcdatamodeld */; };
+		4791EA8028D72F3C00DBAEAD /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4791EA7F28D72F3C00DBAEAD /* CoreDataStack.swift */; };
+		4791EA8228D72F5200DBAEAD /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4791EA8128D72F5200DBAEAD /* CoreDataManager.swift */; };
+		47AA975628D1F45400C4C5A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA975528D1F45400C4C5A1 /* AppDelegate.swift */; };
+		47AA975828D1F45400C4C5A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA975728D1F45400C4C5A1 /* SceneDelegate.swift */; };
+		47AA975A28D1F45400C4C5A1 /* StatusPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA975928D1F45400C4C5A1 /* StatusPageViewController.swift */; };
+		47AA975D28D1F45400C4C5A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47AA975B28D1F45400C4C5A1 /* Main.storyboard */; };
+		47AA975F28D1F45600C4C5A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47AA975E28D1F45600C4C5A1 /* Assets.xcassets */; };
+		47AA976228D1F45600C4C5A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47AA976028D1F45600C4C5A1 /* LaunchScreen.storyboard */; };
+		47AA976B28D1F5DD00C4C5A1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA976A28D1F5DD00C4C5A1 /* UIView+Extension.swift */; };
+		47AA977228D1F74000C4C5A1 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47AA977128D1F74000C4C5A1 /* Rubik-Regular.ttf */; };
+		47AA977428D1F74400C4C5A1 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47AA977328D1F74400C4C5A1 /* Rubik-Medium.ttf */; };
+		47AA977728D1F84D00C4C5A1 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA977528D1F84D00C4C5A1 /* TaskTableViewCell.swift */; };
+		47AA977A28D1F8B200C4C5A1 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47AA977928D1F8B200C4C5A1 /* TaskTableViewCell.xib */; };
+		47AA977E28D22A2C00C4C5A1 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA977D28D22A2C00C4C5A1 /* UIViewController+Extension.swift */; };
+		47AA978228D22A8700C4C5A1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA978128D22A8700C4C5A1 /* DetailViewController.swift */; };
+		47E8B27428D284CC000AE9F3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8B27328D284CC000AE9F3 /* Constant.swift */; };
+		B9D3F025557A8F220E51C5B2 /* Pods_TimeTrackerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E794A8CB4A716EA8260A1C /* Pods_TimeTrackerApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4791EA7328D5D02E00DBAEAD /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		4791EA7528D5D04300DBAEAD /* AllTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTaskViewController.swift; sourceTree = "<group>"; };
+		4791EA7728D5D17000DBAEAD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		4791EA7D28D72F2300DBAEAD /* TaskModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskModel.xcdatamodel; sourceTree = "<group>"; };
+		4791EA7F28D72F3C00DBAEAD /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		4791EA8128D72F5200DBAEAD /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		47AA975228D1F45400C4C5A1 /* TimeTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47AA975528D1F45400C4C5A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		47AA975728D1F45400C4C5A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		47AA975928D1F45400C4C5A1 /* StatusPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPageViewController.swift; sourceTree = "<group>"; };
+		47AA975C28D1F45400C4C5A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		47AA975E28D1F45600C4C5A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		47AA976128D1F45600C4C5A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		47AA976328D1F45600C4C5A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47AA976A28D1F5DD00C4C5A1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		47AA977128D1F74000C4C5A1 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		47AA977328D1F74400C4C5A1 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		47AA977528D1F84D00C4C5A1 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		47AA977928D1F8B200C4C5A1 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TaskTableViewCell.xib; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/TaskTableViewCell.xib"; sourceTree = "<group>"; };
+		47AA977D28D22A2C00C4C5A1 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		47AA978128D22A8700C4C5A1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		47E8B27328D284CC000AE9F3 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		50E794A8CB4A716EA8260A1C /* Pods_TimeTrackerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeTrackerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72C474FFE7C490178FD42442 /* Pods-TimeTrackerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTrackerApp.debug.xcconfig"; path = "Target Support Files/Pods-TimeTrackerApp/Pods-TimeTrackerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D739578855C608A3DA6D91B0 /* Pods-TimeTrackerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTrackerApp.release.xcconfig"; path = "Target Support Files/Pods-TimeTrackerApp/Pods-TimeTrackerApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47AA974F28D1F45400C4C5A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9D3F025557A8F220E51C5B2 /* Pods_TimeTrackerApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4791EA7928D72EE700DBAEAD /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4791EA7B28D72EF400DBAEAD /* CoreData */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		4791EA7B28D72EF400DBAEAD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4791EA7F28D72F3C00DBAEAD /* CoreDataStack.swift */,
+				4791EA8128D72F5200DBAEAD /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		47AA974928D1F45400C4C5A1 = {
+			isa = PBXGroup;
+			children = (
+				47AA975428D1F45400C4C5A1 /* TimeTrackerApp */,
+				47AA977C28D2086B00C4C5A1 /* Fonts */,
+				47AA975328D1F45400C4C5A1 /* Products */,
+				B833DBC2F4241ADE69E4939B /* Frameworks */,
+				D71212F6FE006030FBD68B40 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		47AA975328D1F45400C4C5A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47AA975228D1F45400C4C5A1 /* TimeTrackerApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47AA975428D1F45400C4C5A1 /* TimeTrackerApp */ = {
+			isa = PBXGroup;
+			children = (
+				4791EA7928D72EE700DBAEAD /* Managers */,
+				47E8B27228D284BB000AE9F3 /* Constant */,
+				47AA976928D1F5CD00C4C5A1 /* Extensions */,
+				47AA976D28D1F66600C4C5A1 /* Helpers */,
+				47AA976C28D1F61B00C4C5A1 /* Views */,
+				47AA976E28D1F66A00C4C5A1 /* Controllers */,
+				4791EA7C28D72F2300DBAEAD /* TaskModel.xcdatamodeld */,
+				47AA976328D1F45600C4C5A1 /* Info.plist */,
+			);
+			path = TimeTrackerApp;
+			sourceTree = "<group>";
+		};
+		47AA976928D1F5CD00C4C5A1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				47AA978028D22A5E00C4C5A1 /* UIViewController+Extension */,
+				47AA977F28D22A4500C4C5A1 /* UIView+Extension */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		47AA976C28D1F61B00C4C5A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47AA977028D1F67E00C4C5A1 /* Others */,
+				47AA976F28D1F67900C4C5A1 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		47AA976D28D1F66600C4C5A1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				47AA975528D1F45400C4C5A1 /* AppDelegate.swift */,
+				47AA975728D1F45400C4C5A1 /* SceneDelegate.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		47AA976E28D1F66A00C4C5A1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				47AA975928D1F45400C4C5A1 /* StatusPageViewController.swift */,
+				47AA978128D22A8700C4C5A1 /* DetailViewController.swift */,
+				4791EA7328D5D02E00DBAEAD /* AddTaskViewController.swift */,
+				4791EA7528D5D04300DBAEAD /* AllTaskViewController.swift */,
+				4791EA7728D5D17000DBAEAD /* MainTabBarController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		47AA976F28D1F67900C4C5A1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				47AA977528D1F84D00C4C5A1 /* TaskTableViewCell.swift */,
+				47AA977928D1F8B200C4C5A1 /* TaskTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		47AA977028D1F67E00C4C5A1 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				47AA975B28D1F45400C4C5A1 /* Main.storyboard */,
+				47AA975E28D1F45600C4C5A1 /* Assets.xcassets */,
+				47AA976028D1F45600C4C5A1 /* LaunchScreen.storyboard */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		47AA977C28D2086B00C4C5A1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				47AA977128D1F74000C4C5A1 /* Rubik-Regular.ttf */,
+				47AA977328D1F74400C4C5A1 /* Rubik-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		47AA977F28D22A4500C4C5A1 /* UIView+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				47AA976A28D1F5DD00C4C5A1 /* UIView+Extension.swift */,
+			);
+			path = "UIView+Extension";
+			sourceTree = "<group>";
+		};
+		47AA978028D22A5E00C4C5A1 /* UIViewController+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				47AA977D28D22A2C00C4C5A1 /* UIViewController+Extension.swift */,
+			);
+			path = "UIViewController+Extension";
+			sourceTree = "<group>";
+		};
+		47E8B27228D284BB000AE9F3 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				47E8B27328D284CC000AE9F3 /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		B833DBC2F4241ADE69E4939B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50E794A8CB4A716EA8260A1C /* Pods_TimeTrackerApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D71212F6FE006030FBD68B40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72C474FFE7C490178FD42442 /* Pods-TimeTrackerApp.debug.xcconfig */,
+				D739578855C608A3DA6D91B0 /* Pods-TimeTrackerApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47AA975128D1F45400C4C5A1 /* TimeTrackerApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47AA976628D1F45600C4C5A1 /* Build configuration list for PBXNativeTarget "TimeTrackerApp" */;
+			buildPhases = (
+				52689AD69969091A0B4F802E /* [CP] Check Pods Manifest.lock */,
+				47AA977B28D2017500C4C5A1 /* ShellScript */,
+				47AA974E28D1F45400C4C5A1 /* Sources */,
+				47AA974F28D1F45400C4C5A1 /* Frameworks */,
+				47AA975028D1F45400C4C5A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeTrackerApp;
+			productName = TimeTrackerApp;
+			productReference = 47AA975228D1F45400C4C5A1 /* TimeTrackerApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47AA974A28D1F45400C4C5A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					47AA975128D1F45400C4C5A1 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 47AA974D28D1F45400C4C5A1 /* Build configuration list for PBXProject "TimeTrackerApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 47AA974928D1F45400C4C5A1;
+			productRefGroup = 47AA975328D1F45400C4C5A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47AA975128D1F45400C4C5A1 /* TimeTrackerApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47AA975028D1F45400C4C5A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47AA976228D1F45600C4C5A1 /* LaunchScreen.storyboard in Resources */,
+				47AA977228D1F74000C4C5A1 /* Rubik-Regular.ttf in Resources */,
+				47AA975F28D1F45600C4C5A1 /* Assets.xcassets in Resources */,
+				47AA975D28D1F45400C4C5A1 /* Main.storyboard in Resources */,
+				47AA977428D1F74400C4C5A1 /* Rubik-Medium.ttf in Resources */,
+				47AA977A28D1F8B200C4C5A1 /* TaskTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47AA977B28D2017500C4C5A1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		52689AD69969091A0B4F802E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeTrackerApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47AA974E28D1F45400C4C5A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47AA977E28D22A2C00C4C5A1 /* UIViewController+Extension.swift in Sources */,
+				47AA975A28D1F45400C4C5A1 /* StatusPageViewController.swift in Sources */,
+				4791EA7E28D72F2300DBAEAD /* TaskModel.xcdatamodeld in Sources */,
+				4791EA7828D5D17000DBAEAD /* MainTabBarController.swift in Sources */,
+				47AA975628D1F45400C4C5A1 /* AppDelegate.swift in Sources */,
+				47E8B27428D284CC000AE9F3 /* Constant.swift in Sources */,
+				4791EA8028D72F3C00DBAEAD /* CoreDataStack.swift in Sources */,
+				47AA977728D1F84D00C4C5A1 /* TaskTableViewCell.swift in Sources */,
+				4791EA7628D5D04300DBAEAD /* AllTaskViewController.swift in Sources */,
+				47AA976B28D1F5DD00C4C5A1 /* UIView+Extension.swift in Sources */,
+				47AA975828D1F45400C4C5A1 /* SceneDelegate.swift in Sources */,
+				4791EA7428D5D02E00DBAEAD /* AddTaskViewController.swift in Sources */,
+				4791EA8228D72F5200DBAEAD /* CoreDataManager.swift in Sources */,
+				47AA978228D22A8700C4C5A1 /* DetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		47AA975B28D1F45400C4C5A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47AA975C28D1F45400C4C5A1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		47AA976028D1F45600C4C5A1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47AA976128D1F45600C4C5A1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47AA976428D1F45600C4C5A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		47AA976528D1F45600C4C5A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47AA976728D1F45600C4C5A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72C474FFE7C490178FD42442 /* Pods-TimeTrackerApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W8YZQLY66R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TimeTrackerApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = batuunverdi.TimeTrackerApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		47AA976828D1F45600C4C5A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D739578855C608A3DA6D91B0 /* Pods-TimeTrackerApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W8YZQLY66R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TimeTrackerApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = batuunverdi.TimeTrackerApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47AA974D28D1F45400C4C5A1 /* Build configuration list for PBXProject "TimeTrackerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47AA976428D1F45600C4C5A1 /* Debug */,
+				47AA976528D1F45600C4C5A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47AA976628D1F45600C4C5A1 /* Build configuration list for PBXNativeTarget "TimeTrackerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47AA976728D1F45600C4C5A1 /* Debug */,
+				47AA976828D1F45600C4C5A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4791EA7C28D72F2300DBAEAD /* TaskModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4791EA7D28D72F2300DBAEAD /* TaskModel.xcdatamodel */,
+			);
+			currentVersion = 4791EA7D28D72F2300DBAEAD /* TaskModel.xcdatamodel */;
+			path = TaskModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 47AA974A28D1F45400C4C5A1 /* Project object */;
+}
